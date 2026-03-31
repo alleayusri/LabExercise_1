@@ -1,92 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* ============================================
+   BREAKPOINTS
+   mobile-first base: 320px and up (default)
+   tablet: @media (min-width: 600px)
+   desktop: @media (min-width: 1024px)
+   ============================================ */
 
-/* Task 2, 3 & 4: Backgrounds, Text, Fonts & Colors */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --color-primary: #e91e63;
+    --color-primary-dark: #c2185b;
+    --color-accent: #f8bbd0;
+    --color-accent-light: #fde4ec;
+    --color-surface: #ffffff;
+    --color-background: #fff7fa;
+    --color-grey-100: #f5f5f5;
+    --color-grey-300: #d9d9d9;
+    --color-grey-700: #555555;
+    --color-text: #333333;
+    --color-white: #ffffff;
+    --color-shadow: rgba(0, 0, 0, 0.10);
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --space-sm: 0.8rem;
+    --space-md: 1.6rem;
+    --space-lg: 3rem;
+
+    --radius-sm: 0.6rem;
+    --radius-md: 1rem;
+    --radius-lg: 2rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #fce4ec;
-    color: #333;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-sm);
+}
+
+/* margin separates content areas from each other */
 header {
-    background: linear-gradient(135deg, #ff7faa 0%, #ff2d73 100%);
-    color: #fff;
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+    color: var(--color-white);
+    padding: var(--space-lg);
+    box-shadow: 0 0.4rem 1rem var(--color-shadow);
 }
 
-header h1 {
-    margin: 0 0 5px 0;
-    font-size: 2.2rem;
-    color: #fff;
-}
-
-header p {
-    margin: 0 0 10px 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
+/* padding gives breathing space inside the main content panel */
 main {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 120rem;
+    margin: var(--space-md) auto;
+    background-color: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.4rem 1rem var(--color-shadow);
 }
 
-section, article {
-    margin-bottom: 30px;
-}
-
+/* padding keeps footer text away from edges */
 footer {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f8bbd0;
-    color: #555;
-    border-radius: 8px;
+    margin: var(--space-lg) auto var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--color-accent);
+    color: var(--color-grey-700);
+    border-radius: var(--radius-md);
+    max-width: 120rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #e91e63;
+/* margin spaces nav from hero/header text */
+nav {
+    margin-top: var(--space-md);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
     margin-top: 0;
-    text-align: center;
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.6rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+small {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--color-grey-700);
+}
+
+blockquote {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    background-color: var(--color-accent-light);
+    border-left: 0.5rem solid var(--color-primary);
+    margin: var(--space-md) 0;
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--color-primary);
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+}
+
+code {
+    font-size: 1.4rem;
+    background-color: var(--color-accent-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #fecdd3;
-    margin: 20px 0;
+    border-top: 0.1rem solid var(--color-grey-300);
+    margin: var(--space-md) 0;
 }
 
-/* Task 5: Link Styling */
 a {
-    color: #e91e63;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s, background-color 0.2s;
 }
 
-a:hover {
-    color: #c2185b;
-    text-decoration: underline;
-}
-
-a:active {
-    color: #ad1457;
+a:link {
+    color: var(--color-primary);
 }
 
 a:visited {
-    color: #d81b60;
+    color: var(--color-primary-dark);
 }
 
-nav {
-    margin-top: 15px;
+a:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+a:active {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-white);
 }
 
 .nav-links {
@@ -96,195 +226,263 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: var(--space-sm);
 }
 
 .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: background 0.3s, color 0.3s, transform 0.2s;
     display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius-lg);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    color: var(--color-white);
+    transition: color 0.2s, background-color 0.2s, transform 0.2s;
 }
 
-.nav-links li a:link, .nav-links li a:visited {
-    color: #fff; 
+.nav-links li a:visited {
+    color: var(--color-white);
 }
 
 .nav-links li a:hover {
-    background: rgba(255, 255, 255, 0.25);
-    text-decoration: none;
-    transform: translateY(-2px);
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-0.2rem);
+}
+
+.nav-links li a:active {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-links li a.active {
-    background: #fff;
-    color: #e91e63;
-    font-weight: 700;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-bottom: 0.3rem solid var(--color-primary-dark);
 }
 
 .skip-links {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: var(--space-sm) 0 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: var(--space-sm);
 }
 
 .skip-links li a {
-    color: #fff;
-    background: rgba(0,0,0,0.1);
-    text-decoration: none;
-    font-size: 13px;
-    padding: 5px 12px;
-    border-radius: 12px;
-    transition: background 0.2s;
+    color: var(--color-white);
+    background-color: rgba(0, 0, 0, 0.12);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-lg);
+    font-size: 1.2rem;
+}
+
+.skip-links li a:visited {
+    color: var(--color-white);
 }
 
 .skip-links li a:hover {
-    background: rgba(255, 255, 255, 0.3);
-    text-decoration: none;
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Task 6: List Styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    text-align: center;
+}
+
+.hero-text,
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    max-width: 28rem;
+    border: 0.4rem solid var(--color-white);
+    box-shadow: 0 0.6rem 1.4rem var(--color-shadow);
+}
+
+/* border defines the card edge and padding keeps content away from that edge */
+.card {
+    background-color: var(--color-surface);
+    padding: var(--space-md);
+    border: 0.1rem solid var(--color-grey-300);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.4rem 1rem var(--color-shadow);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-content: start;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-0.4rem);
+}
+
+.page-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.sidebar {
+    background-color: var(--color-accent-light);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+.project-grid article {
+    background-color: var(--color-surface);
+    padding: var(--space-md);
+    border: 0.1rem solid var(--color-grey-300);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.4rem 1rem var(--color-shadow);
+    transition: transform 0.2s;
+}
+
+.project-grid article:hover {
+    transform: translateY(-0.4rem);
+}
+
+.project-grid figure {
+    margin: 0 0 var(--space-md) 0;
+}
+
+.project-grid figcaption {
+    font-style: italic;
+    color: var(--color-grey-700);
+    margin-top: var(--space-sm);
+}
+
+.float-image {
+    float: none;
+    margin-right: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
 ul {
-    list-style-type: square;
-    padding-left: 20px;
-    color: #444;
+    padding-left: 2rem;
 }
 
 ul ul {
     list-style-type: circle;
 }
 
-ol {
-    list-style-type: decimal-leading-zero;
-    padding-left: 20px;
-    color: #444;
-}
-
 ol[type="I"] {
-    list-style-type: upper-roman;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 dl {
-    background: #fffafa;
-    border-left: 4px solid #ff7faa;
-    padding: 15px;
-    border-radius: 4px;
+    background-color: var(--color-background);
+    border-left: 0.4rem solid var(--color-primary);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
 }
 
 dt {
     font-weight: 700;
-    color: #e91e63;
-    margin-top: 10px;
+    color: var(--color-primary);
+    margin-top: var(--space-sm);
 }
 
 dd {
-    margin-left: 20px;
-    color: #555;
-    margin-bottom: 15px;
+    margin-left: 1.8rem;
+    margin-bottom: var(--space-sm);
 }
 
-/* Task 7: Table Styling */
+.skills-list li:first-child {
+    border-top: none;
+}
+
+.skills-list li:last-child {
+    border-bottom: none;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 15px;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    margin-top: var(--space-md);
+    background-color: var(--color-surface);
+    box-shadow: 0 0.4rem 1rem var(--color-shadow);
 }
 
-caption {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 12px;
-    color: #e91e63;
+th,
+td {
+    padding: 1rem 1.2rem;
+    border: 0.1rem solid var(--color-grey-300);
+    text-align: left;
+    font-size: 1.5rem;
 }
 
 thead th {
-    background-color: #ff7faa;
-    color: white;
-    padding: 12px 15px;
-    border: 1px solid #ff4081;
+    background-color: var(--color-accent);
+    color: var(--color-text);
 }
 
-tbody td, tbody th {
-    padding: 10px 15px;
-    border: 1px solid #fecdd3;
-    color: #444;
-}
-
-tbody tr:hover {
-    background-color: #fff0f5;
+tbody tr:nth-child(even) {
+    background-color: var(--color-accent-light);
 }
 
 tbody th[scope="row"] {
-    background-color: #fffafa;
-    color: #e91e63;
-    font-weight: 600;
     text-align: center;
 }
 
 tfoot td {
-    background-color: #fce4ec;
-    padding: 12px 15px;
-    border: 1px solid #fecdd3;
-    color: #333;
-    font-weight: bold;
+    background-color: var(--color-background);
+    font-weight: 700;
 }
 
-tr:has(td[colspan="4"]) td {
-    background-color: #fff3f8;
+.summary-row td {
+    background-color: var(--color-background);
 }
 
-tr:has(td[colspan="4"]) td:first-child {
-    text-align: right;
-    font-weight: bold;
-}
-
-/* Task 8: Form Styling */
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-md);
 }
 
-form fieldset {
-    border: 1px solid #fecdd3;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fafafa;
+fieldset {
+    border: 0.1rem solid var(--color-grey-300);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
 }
 
-form legend {
-    font-weight: bold;
-    background: #e91e63;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
+legend {
+    font-weight: 700;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-sm);
 }
 
-form fieldset > div {
-    margin-bottom: 20px;
+.form-group {
+    margin-bottom: var(--space-md);
 }
 
 label {
     font-weight: 600;
     display: block;
-    margin-bottom: 8px;
-    color: #333;
+    margin-bottom: 0.6rem;
 }
 
 input[type="text"],
@@ -295,120 +493,116 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    border: 1.5px solid #ddd;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 14.5px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
+    padding: 1rem;
+    border: 0.1rem solid var(--color-grey-300);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    background-color: var(--color-surface);
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: #ff7faa;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 127, 170, 0.2);
-}
-
-span {
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-/* Inline Checkbox and Radio styling */
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 0;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-input[type="checkbox"], input[type="radio"] {
-    display: inline-block;
-    width: auto;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-form input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
+input[type="range"] {
     width: 100%;
-    margin: 10px 0;
 }
 
-form input[type="range"]:focus { outline: none; }
-
-form input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(90deg, #ff7faa 0%, #ff2d73 100%);
-    height: 8px;
-    border-radius: 4px;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3rem var(--color-accent);
+    border-color: var(--color-primary);
 }
 
-form input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    margin-top: -6px;
-    background-color: #fff;
-    border: 2px solid #ff2d73;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+.checkbox-group label,
+.radio-group label {
+    display: inline-block;
+    margin-right: 1.2rem;
+    font-weight: 400;
 }
 
-form div:last-child {
+.form-actions {
     text-align: center;
 }
 
-button[type="submit"], button[type="reset"] {
-    padding: 12px 28px;
+button {
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 30px;
+    border-radius: var(--radius-lg);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 button[type="submit"] {
-    background-color: #e91e63;
-    color: white;
-    margin-left: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 button[type="submit"]:hover {
-    background-color: #d81b60;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+    background-color: var(--color-primary-dark);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.97);
 }
 
 button[type="reset"] {
-    background-color: #f44336;
-    color: white;
+    background-color: var(--color-grey-700);
+    color: var(--color-white);
+    margin-right: var(--space-sm);
 }
 
 button[type="reset"]:hover {
-    background-color: #d32f2f;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
+    background-color: var(--color-text);
 }
 
-/* Image formatting */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 2px solid #fecdd3;
+mark {
+    background-color: var(--color-accent);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.3rem;
 }
 
-figure {
-    margin: 0;
+@media (min-width: 600px) {
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .page-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-links {
+        justify-content: flex-end;
+    }
+
+    .page-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .featured-card {
+        grid-column: span 2;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr 28rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .float-image {
+        float: left;
+        margin-right: var(--space-md);
+    }
 }
