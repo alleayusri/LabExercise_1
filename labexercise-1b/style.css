@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Task 2, 3 & 4: Backgrounds, Text, Fonts & Colors */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #fce4ec;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #ff7faa 0%, #ff2d73 100%);
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+header p {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+section, article {
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8bbd0;
+    color: #555;
+    border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e91e63;
+    margin-top: 0;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #fecdd3;
+    margin: 20px 0;
+}
+
+/* Task 5: Link Styling */
+a {
+    color: #e91e63;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c2185b;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ad1457;
+}
+
+a:visited {
+    color: #d81b60;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.nav-links li a:link, .nav-links li a:visited {
+    color: #fff; 
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.nav-links li a.active {
+    background: #fff;
+    color: #e91e63;
+    font-weight: 700;
+}
+
+.skip-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.skip-links li a {
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.skip-links li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+/* Task 6: List Styling */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #444;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+    padding-left: 20px;
+    color: #444;
+}
+
+ol[type="I"] {
+    list-style-type: upper-roman;
+    font-weight: 500;
+}
+
+dl {
+    background: #fffafa;
+    border-left: 4px solid #ff7faa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+dt {
+    font-weight: 700;
+    color: #e91e63;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Task 7: Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    color: #e91e63;
+}
+
+thead th {
+    background-color: #ff7faa;
+    color: white;
+    padding: 12px 15px;
+    border: 1px solid #ff4081;
+}
+
+tbody td, tbody th {
+    padding: 10px 15px;
+    border: 1px solid #fecdd3;
+    color: #444;
+}
+
+tbody tr:hover {
+    background-color: #fff0f5;
+}
+
+tbody th[scope="row"] {
+    background-color: #fffafa;
+    color: #e91e63;
+    font-weight: 600;
+    text-align: center;
+}
+
+tfoot td {
+    background-color: #fce4ec;
+    padding: 12px 15px;
+    border: 1px solid #fecdd3;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:has(td[colspan="4"]) td {
+    background-color: #fff3f8;
+}
+
+tr:has(td[colspan="4"]) td:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Task 8: Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form fieldset {
+    border: 1px solid #fecdd3;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+form legend {
+    font-weight: bold;
+    background: #e91e63;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+form fieldset > div {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14.5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ff7faa;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 127, 170, 0.2);
+}
+
+span {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Inline Checkbox and Radio styling */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+form input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+}
+
+form input[type="range"]:focus { outline: none; }
+
+form input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, #ff7faa 0%, #ff2d73 100%);
+    height: 8px;
+    border-radius: 4px;
+}
+
+form input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -6px;
+    background-color: #fff;
+    border: 2px solid #ff2d73;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+form div:last-child {
+    text-align: center;
+}
+
+button[type="submit"], button[type="reset"] {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+button[type="submit"] {
+    background-color: #e91e63;
+    color: white;
+    margin-left: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #d81b60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
+}
+
+/* Image formatting */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #fecdd3;
+}
+
+figure {
+    margin: 0;
+}
