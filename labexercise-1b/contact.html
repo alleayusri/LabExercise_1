@@ -1,125 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get in touch with Allea for collaborations or inquiries.">
     <title>Allea's Portfolio - Contact</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Consistent Header and Navigation -->
-    <header
-       >
-        <h1>Contact Me</h1>
-        <p>Let's Get in Touch | Allea</p>
+    <header>
+        <div class="site-nav">
+            <div class="logo">Allea</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="academic.html">Academic</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="academic.html">Academic</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Contact Me</h1>
+                <p>Let's Get in Touch | Allea</p>
+            </div>
+        </section>
     </header>
 
-    <main
-       >
-
+    <main>
         <h2>Send a Message</h2>
-        <hr>
         <p>If you have any questions or would like to collaborate, please fill out the form below.</p>
 
-        <!-- Form showing various input types and validation -->
         <form action="#" method="post">
-
             <fieldset>
                 <legend>Personal Information</legend>
 
-                <div>
-                    <label for="full-name">Full
-                        Name:</label>
-                    <input type="text" id="full-name" name="full-name" placeholder="John Doe" required maxlength="50"
-                       >
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="John Doe" required maxlength="50">
                 </div>
 
-                <div>
-                    <label for="email">Email
-                        Address:</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required
-                       >
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
                 </div>
 
-                <div>
-                    <label for="phone">Phone
-                        Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+60 123 4567 89"
-                       >
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+60 123 4567 89">
                 </div>
 
-                <div>
-                    <label for="age">Age (15-80): <span
-                            id="age-value">20</span></label>
-                    <input type="range" id="age" name="age" min="15" max="80" value="20"
-                        oninput="document.getElementById('age-value').textContent = this.value">
+                <div class="form-group">
+                    <label for="age">Age (15-80):</label>
+                    <input type="range" id="age" name="age" min="15" max="80" value="20">
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Message Details</legend>
 
-                <div>
-                    <label for="subject">Subject of
-                        Interest:</label>
-                    <select id="subject" name="subject" required
-                       >
+                <div class="form-group">
+                    <label for="subject">Subject of Interest:</label>
+                    <select id="subject" name="subject" required>
                         <option value="">-- Please Select --</option>
                         <optgroup label="Professional Work">
                             <option value="job">Job Opportunity</option>
                             <option value="freelance">Freelance Collaboration</option>
                         </optgroup>
-                        <optgroup label="Academic & Other">
+                        <optgroup label="Academic &amp; Other">
                             <option value="academic">Academic Inquiry</option>
                             <option value="general">General Networking</option>
                         </optgroup>
                     </select>
                 </div>
 
-
-
-                <div>
-                    <label for="experience">Years of
-                        Coding Experience (Number):</label>
-                    <input type="number" id="experience" name="experience" min="0" max="50"
-                       >
+                <div class="form-group">
+                    <label for="experience">Years of Coding Experience:</label>
+                    <input type="number" id="experience" name="experience" min="0" max="50">
                 </div>
 
-                <div>
-                    <label for="start-date">Earliest
-                        Start Date:</label>
-                    <input type="date" id="start-date" name="start-date"
-                       >
+                <div class="form-group">
+                    <label for="start-date">Earliest Start Date:</label>
+                    <input type="date" id="start-date" name="start-date">
                 </div>
 
-                <div>
+                <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required
-                       ></textarea>
+                    <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Preferences</legend>
 
-                <div>
-                    <span>Which services are you
-                        interested in?</span>
+                <div class="form-group checkbox-group">
+                    <label>Which services are you interested in?</label>
                     <input type="checkbox" id="web" name="services" value="web">
                     <label for="web">Web Development</label>
 
@@ -130,9 +110,8 @@
                     <label for="ui">UI/UX Design</label>
                 </div>
 
-                <div>
-                    <span>Preferred Callback
-                        Method:</span>
+                <div class="form-group radio-group">
+                    <label>Preferred Callback Method:</label>
                     <input type="radio" id="email-cb" name="callback" value="email" checked>
                     <label for="email-cb">Email</label>
 
@@ -144,21 +123,13 @@
                 </div>
             </fieldset>
 
-            <div>
-                <!-- 5 elements with inline styles as per requirement -->
-                <button type="reset"
-                   >Reset
-                    Form</button>
-                <button type="submit"
-                   >Submit
-                    Message</button>
+            <div class="form-actions">
+                <button type="reset">Reset Form</button>
+                <button type="submit">Submit Message</button>
             </div>
-
         </form>
-
     </main>
 
-    <!-- Footer -->
     <footer>
         <small>&copy; 2026 Allea - Software Engineering Student</small>
         <address>
@@ -168,5 +139,4 @@
     </footer>
 
 </body>
-
 </html>
