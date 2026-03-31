@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A showcase of Allea's portfolio projects and coding achievements.">
+    <title>Allea's Portfolio - Projects</title>
+    <style>
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+        }
+
+        .nav-links li a:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .nav-links li a.active {
+            background: #fff;
+            color: #e91e63;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f4;">
+
+    <!-- Consistent Header and Navigation -->
+    <header
+        style="background: linear-gradient(135deg, #ff7faa 0%, #ff2d73 100%); color: #fff; padding: 1rem; text-align: center;">
+        <h1>My Projects</h1>
+        <p>A Showcase of Innovation | Allea</p>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main
+        style="max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+        <h2 style="color: #e91e63;">Featured Projects</h2>
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+        <p>Here are some of the web development projects I have worked on recently.</p>
+
+        <section style="display: flex; flex-direction: column; gap: 40px; margin-top: 30px;">
+
+            <!-- Project 1: Portfolio Lab (Linked Image) -->
+            <article>
+                <h3>Project 1: Personal Portfolio Website</h3>
+                <figure>
+                    <!-- Clickable Image -->
+                    <a href="index.html">
+                        <img src="images/portfolio.jpg"
+                            alt="A screenshot of the homepage of Allea's personal portfolio." width="400" height="250"
+                            style="border: 2px solid #ddd; border-radius: 4px;">
+                    </a>
+                    <figcaption style="font-style: italic; color: #666; margin-top: 10px;">
+                        Figure 1: Homepage design focusing on clean structure and semantic HTML. (Click the image to
+                        view home)
+                    </figcaption>
+                </figure>
+                <p>This project was built to practice semantic HTML5 tags and inline styling. It serves as a
+                    comprehensive example of my basic web development skills.</p>
+            </article>
+
+            <hr style="border: 0; border-top: 1px solid #ccc;">
+
+            <!-- Project 2: Data Visualization (Title attribute and Align attribute) -->
+            <article>
+                <h3>Project 2: Academic Result Tracker</h3>
+                <figure>
+                    <!-- 
+                        COMMENT: The 'align' attribute used below is DEPRECATED in HTML5. 
+                        It is better to use CSS (like float or margin) for alignment.
+                    -->
+                    <img src="images/academic_tracker.png"
+                        alt="Dashboard view of the academic result tracker application." width="400" height="250"
+                        title="Detailed View of Result Tracker" align="left"
+                        style="margin-right: 20px; border: 2px solid #ddd; border-radius: 4px;">
+
+                    <figcaption style="font-style: italic; color: #666; margin-top: 10px;">
+                        Figure 2: User dashboard interface for tracking semester grades.
+                    </figcaption>
+                </figure>
+                <p style="clear: both; padding-top: 10px;">The Academic Result Tracker is a web application designed to
+                    help students manage their course grades and calculate their GPA automatically. It uses
+                    sophisticated data structures to maintain record accuracy.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="text-align: center; margin-top: 40px; color: #777;">
+        <small>&copy; 2026 Allea - Software Engineering Student</small>
+        <address style="margin-top: 10px; font-style: normal;">
+            Email: <a href="mailto:allea@example.com">allea@example.com</a><br>
+            City: Semenyih, Malaysia
+        </address>
+    </footer>
+
+</body>
+
+</html>
