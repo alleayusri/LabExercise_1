@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Allea's professional skills and technical knowledge.">
+    <title>Allea's Portfolio - Skills</title>
+    <style>
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+        }
+
+        .nav-links li a:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .nav-links li a.active {
+            background: #fff;
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        .skip-links {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .skip-links li a {
+            color: #fce4ec;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+
+        .skip-links li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f4;">
+
+    <!-- Consistent Header and Navigation -->
+    <header
+        style="background: linear-gradient(135deg, #ff7faa 0%, #ff2d73 100%); color: #fff; padding: 1rem; text-align: center;">
+        <h1>Technical Skills</h1>
+        <p>Software Engineering Expertise | Allea</p>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Jump Links for Task 3 requirement: "Leap to named sections on same page" -->
+            <ul class="skip-links">
+                <li><a href="#top-skills">Top Skills</a></li>
+                <li><a href="#tech-used">Technologies</a></li>
+                <li><a href="#glossary">Glossary</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main
+        style="max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+        <!-- Task 3: Top Skills Section (ol with type="I" and start) -->
+        <section id="top-skills">
+            <h2 style="color: #e91e63;">Top Skills</h2>
+            <ol type="I" start="1">
+                <li>System Analyst</li>
+                <li>Database Management</li>
+                <li>Software Requirements</li>
+                <li>Project Managements</li>
+            </ol>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+
+        <!-- Task 3: Technologies Used (Nested List) -->
+        <section id="tech-used">
+            <h2 style="color: #e91e63;">Technologies Used</h2>
+            <ul style="padding-left: 20px;">
+                <li>Frontend Development
+                    <ul style="padding-left: 20px;">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js Framework</li>
+                    </ul>
+                </li>
+                <li>Backend Development
+                    <ul style="padding-left: 20px;">
+                        <li>Node.js</li>
+                        <li>Python / Django</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+
+        <!-- Task 3: Glossary using dl, dt, dd -->
+        <section id="glossary">
+            <h2 style="color: #e91e63;">IT Glossary</h2>
+            <dl>
+                <dt style="font-weight: bold; margin-top: 10px;">Full-Stack</dt>
+                <dd>Developing both the client side and the server side of an application.</dd>
+
+                <dt style="font-weight: bold; margin-top: 10px;">Responsive Design</dt>
+                <dd>An approach to web design that makes web pages render well on a variety of devices and window or
+                    screen sizes.</dd>
+
+                <dt style="font-weight: bold; margin-top: 10px;">API</dt>
+                <dd>Application Programming Interface, a set of functions and procedures allowing the services to
+                    communicate.</dd>
+
+                <dt style="font-weight: bold; margin-top: 10px;">Semantic HTML</dt>
+                <dd>HTML elements that describe the meaning and structure of content clearly.</dd>
+            </dl>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+
+        <!-- Task 3: Ordered List with Reversed Attribute -->
+        <section>
+            <h2 style="color: #e91e63;">Learning Roadmap (Countdown)</h2>
+            <ol reversed>
+                <li>Advanced AI Integration (Goal)</li>
+                <li>Cloud Infrastructure (Next)</li>
+                <li>Web Frameworks (Current)</li>
+                <li>Core HTML Fundamentals (Done)</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="text-align: center; margin-top: 40px; color: #777;">
+        <small>&copy; 2026 Allea - Software Engineering Student</small>
+        <address style="margin-top: 10px; font-style: normal;">
+            Email: <a href="mailto:allea@example.com">allea@example.com</a><br>
+            City: Semenyih, Malaysia
+        </address>
+    </footer>
+
+</body>
+
+</html>
