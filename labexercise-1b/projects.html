@@ -1,91 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A showcase of Allea's portfolio projects and coding achievements.">
     <title>Allea's Portfolio - Projects</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Consistent Header and Navigation -->
-    <header
-       >
-        <h1>My Projects</h1>
-        <p>A Showcase of Innovation | Allea</p>
+    <header>
+        <div class="site-nav">
+            <div class="logo">Allea</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="academic.html">Academic</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="academic.html">Academic</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>My Projects</h1>
+                <p>A Showcase of Innovation | Allea</p>
+            </div>
+        </section>
     </header>
 
-    <main
-       >
-
+    <main>
         <h2>Featured Projects</h2>
-        <hr>
         <p>Here are some of the web development projects I have worked on recently.</p>
 
-        <section>
-
-            <!-- Project 1: Portfolio Lab (Linked Image) -->
+        <section class="project-grid">
             <article>
                 <h3>Project 1: Personal Portfolio Website</h3>
                 <figure>
-                    <!-- Clickable Image -->
                     <a href="index.html">
-                        <img src="images/portfolio.jpg"
-                            alt="A screenshot of the homepage of Allea's personal portfolio." width="400" height="250"
-                           >
+                        <img src="images/portfolio.jpg" alt="A screenshot of the homepage of Allea's personal portfolio." width="400" height="225">
                     </a>
-                    <figcaption>
-                        Figure 1: Homepage design focusing on clean structure and semantic HTML. (Click the image to
-                        view home)
-                    </figcaption>
+                    <figcaption>Figure 1: Homepage design focusing on clean structure and semantic HTML.</figcaption>
                 </figure>
-                <p>This project was built to practice semantic HTML5 tags and inline styling. It serves as a
-                    comprehensive example of my basic web development skills.</p>
+                <p>
+                    This project was built to practice semantic HTML5 tags and CSS styling.
+                    It serves as a comprehensive example of my basic web development skills.
+                </p>
             </article>
 
-            <hr>
-
-            <!-- Project 2: Data Visualization (Title attribute and Align attribute) -->
             <article>
-                <h3>Project 2: Academic Result Tracker</h3>
+                <h3>Project 2: Diabetes Prediction System</h3>
                 <figure>
-                    <!-- 
-                        COMMENT: The 'align' attribute used below is DEPRECATED in HTML5. 
-                        It is better to use CSS (like float or margin) for alignment.
-                    -->
-                    <img src="images/academic_tracker.png"
-                        alt="Dashboard view of the academic result tracker application." width="400" height="250"
-                        title="Detailed View of Result Tracker"
-                       >
-
-                    <figcaption>
-                        Figure 2: User dashboard interface for tracking semester grades.
-                    </figcaption>
+                    <img src="images/roc.png" alt="Sample output of the analysis." width="400" height="250" title="ROC Result" class="float-image">
+                    <figcaption>Figure 2: Output of Gradient Boosting model.</figcaption>
                 </figure>
-                <p>The Academic Result Tracker is a web application designed to
-                    help students manage their course grades and calculate their GPA automatically. It uses
-                    sophisticated data structures to maintain record accuracy.</p>
+                <p class="clearfix">
+                    Research-based machine learning project predicting diabetes risk using a dataset
+                    of over 70,000 records.
+                </p>
             </article>
 
-        </section>
+            <article>
+                <h3>Project 3: Etiqa e-Money Prototype</h3>
+                <figure>
+                    <img src="images/Etiqa.png" alt="Etiqa e-Money prototype." width="400" height="250" title="View Homepage" class="float-image">
+                    <figcaption>Figure 3: User dashboard interface showing current balance.</figcaption>
+                </figure>
+                <p class="clearfix">
+                    A complete SRS for the Etiqa eMoney digital payout platform covering wallet
+                    management, payout processing, and system requirements.
+                </p>
+            </article>
 
+            <article>
+                <h3>Project 4: Trackify.co</h3>
+                <figure>
+                    <img src="images/track.jpg" alt="Track parcel system output." width="400" height="250" title="Track Parcel System" class="float-image">
+                    <figcaption>Figure 4: Parcel tracking system interface.</figcaption>
+                </figure>
+                <p class="clearfix">
+                    A tracking platform designed to help users follow parcel delivery progress
+                    through a simple and user-friendly interface.
+                </p>
+            </article>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <small>&copy; 2026 Allea - Software Engineering Student</small>
         <address>
@@ -95,5 +98,4 @@
     </footer>
 
 </body>
-
 </html>
